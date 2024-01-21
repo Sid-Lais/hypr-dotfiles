@@ -65,19 +65,19 @@ https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-
 <details>
 <summary><h3>Dependencies</h3></summary>
 
-- Using <kbd>paru</kbd>
+- Using <kbd>yay</kbd>
     ```sh
-    paru -S base-devel pokemon-colorscripts-git hyprland-git hyprpicker-git xdg-desktop-portal-hyprland-git waybar-hyprland cava kitty wofi starship wl-clipboard swaync swaylock-effects-git swaylockd tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist-bin gamemode polkit-gnome g4music wlogout visual-studio-code-bin boo-grub-git sddm-git boo-sddm-git proxzima-plymouth-git yad blueman network-manager-applet libinput-gestures light --needed
+    yay -S base-devel pokemon-colorscripts-git hyprland-git hyprpicker-git xdg-desktop-portal-hyprland waybar cava kitty wofi starship wl-clipboard swaync swaylock-effects-git swaylockd tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist-bin gamemode polkit-gnome wlogout visual-studio-code-bin boo-grub-git sddm-git boo-sddm-git proxzima-plymouth-git yad blueman network-manager-applet libinput-gestures light --needed
     ```
 
 - See https://wiki.hyprland.org/Useful-Utilities/Hyprland-desktop-portal/#installing
     ```sh
-    paru -R xdg-desktop-portal-wlr
+    yay -R xdg-desktop-portal-wlr
     ```
 
 - Extra dependencies (not necessary)
     ```sh
-    paru -S system76-power obs-studio wlrobs-hg v4l2loopback-dkms v4l2loopback-utils v4l-utils waydroid binder_linux-dkms chromium-wayland-vaapi qalculate-gtk qimgv-light rlr-git uget libreoffice-fresh nemo bulky --needed
+    yay -S system76-power v4l2loopback-dkms v4l2loopback-utils v4l-utils waydroid binder_linux-dkms qalculate-gtk qimgv-light rlr-git uget libreoffice-fresh nemo bulky --needed
     ```
 
 - [<kbd>Chaotic-AUR</kbd>](https://aur.chaotic.cx/) :: Automated building repo for AUR packages 👨🏻‍💻
@@ -124,8 +124,7 @@ https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-
 <summary><h3>Dotfiles</h3></summary>
 
 ```sh
-cd ~/Downloads
-git clone https://github.com/PROxZIMA/.dotfiles.git
+git clone https://github.com/Sid-Lais/hypr-dotfiles
 cd .dotfiles
 cp -r .config .icons .local .mpd .ncmpcpp .scripts ~/
 cp .face .fonts.conf .dmrc .gtkrc-2.0 ~/

@@ -13,10 +13,10 @@
     "modules-left": [
         "custom/launcher",
         "wlr/workspaces",
-        // "cpu",
-        // "memory",
-        // "temperature",
-        // "disk",
+        "cpu",
+        "memory",
+        "temperature",
+        "disk",
         "custom/updates"
     ],
     "modules-center": [
@@ -41,10 +41,10 @@
         "tooltip": true,
         "exec": "echo '{\"text\":\"💧\",\"tooltip\":\"Drun | Run\"}'",
         "return-type": "json",
-        "on-click": "pkill tofi || gamemoderun tofi-drun -c ~/.config/tofi/tofi.launcher.conf",
-        "on-click-right": "pkill tofi || gamemoderun tofi-run -c ~/.config/tofi/tofi.launcher.conf",
-        // "on-click": "pkill wofi || wofi --show drun -n",
-        // "on-click-right": "pkill wofi || wofi --show run -n",
+        // "on-click": "pkill tofi || gamemoderun tofi-drun -c ~/.config/tofi/tofi.launcher.conf",
+        // "on-click-right": "pkill tofi || gamemoderun tofi-run -c ~/.config/tofi/tofi.launcher.conf",
+        "on-click": "pkill wofi || wofi --show drun -n",
+        "on-click-right": "pkill wofi || wofi --show run -n"
     },
     "wlr/workspaces": {
         // "format": "{icon} {name}",
@@ -143,7 +143,7 @@
         "interval": 2
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
+        // "scroll-step": 2, // %, can be a float
         "format": "{icon} {volume}%", // {format_source}
         "format-bluetooth": "{icon} {volume}%", // {format_source}
         "format-bluetooth-muted": "", // {format_source}
