@@ -29,14 +29,14 @@
 
  ╭─ Distro  -> Archcraft x86_64
  ├─ Editor  -> VSCode / NeoVim
- ├─ Browser -> Firefox
+ ├─ Browser -> Chrome
  ├─ Shell   -> ZSH
  ╰─ Resource Monitor -> Btop
 
- ╭─ Model -> ASUS TUF Gaming A15
- ├─ CPU   -> Ryzen 7 4800H @ 4.3GHz
- ├─ GPU   -> NVIDIA GeForce RTX 3050
- ╰─ Resolution -> 1920x1080
+ ╭─ Model -> Lenovo IdeaPad 5 Pro
+ ├─ CPU   -> Ryzen 7 5800U @ 4.5GHz
+ ├─ GPU   -> AMD ATI Radeon Vega
+ ╰─ Resolution -> 2240x1400
 
  ╭─ WM       -> Hyprland
  ├─ Terminal -> Kitty
