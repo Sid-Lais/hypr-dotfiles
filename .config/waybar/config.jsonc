@@ -47,8 +47,8 @@
         "on-click-right": "pkill wofi || wofi --show run -n"
     },
     "wlr/workspaces": {
-        // "format": "{icon} {name}",
-        "format": "",
+        "format": "{icon} {name}",
+        // "format": "",
         "format-icons": {
             "active": "",
             "default": ""
@@ -113,7 +113,7 @@
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl previous",
         "on-scroll-down": "playerctl next",
-        "on-click-right": "g4music",
+        "on-click-right": "spotify",
         "max-length": 35
     },
     "hyprland/window": {
@@ -143,7 +143,7 @@
         "interval": 2
     },
     "pulseaudio": {
-        // "scroll-step": 2, // %, can be a float
+        "scroll-step": 2, // %, can be a float
         "format": "{icon} {volume}%", // {format_source}
         "format-bluetooth": "{icon} {volume}%", // {format_source}
         "format-bluetooth-muted": "", // {format_source}
@@ -178,8 +178,8 @@
             "",
             ""
         ],
-        "on-scroll-up": "light -A 1",
-        "on-scroll-down": "light -U 1",
+        "on-scroll-up": "light -A 2",
+        "on-scroll-down": "light -U 2",
         "interval": 2
     },
     "battery": {
