@@ -148,7 +148,7 @@ chmod -R +x ~/.config/wlogout/
 - [<kbd>.dotfiles/.config/Code/User/vsc.css</kbd>](.config/Code/User/vsc.css) is a special CSS file that I use to modify vscode's UI (Vscode's core file is edited so follow the steps with care).
     ```sh
     $ # Replace [code|codium|vscodium-bin] with appropriate folder name.
-    $ resPrefix=/usr/share/[code|codium|vscodium-bin]/resources/app/out/vs/code/electron-[browser|sandbox]/workbench
+    $ resPrefix=/opt/visual-studio-code/resources/app/out/vs/code/electron-sandbox/workbench
     $ # Symlink required files in the above folder.
     $ ln -s '/full/path/to/.dotfiles/.config/Code/User/vsc.css' $resPrefix
     $ ln -s '/full/path/to/.dotfiles/.icons/default/vsc/' $resPrefix
