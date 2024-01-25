@@ -125,7 +125,7 @@ https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-
 
 ```sh
 git clone https://github.com/Sid-Lais/hypr-dotfiles
-cd .dotfiles
+cd hypr-dotfiles
 cp -r .config .icons .local .mpd .ncmpcpp .scripts ~/
 cp .face .fonts.conf .dmrc .gtkrc-2.0 ~/
 chmod -R +x ~/.scripts/
