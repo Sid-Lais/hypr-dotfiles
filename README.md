@@ -149,7 +149,7 @@ chmod -R +x ~/.config/wlogout/
     ```sh
     $ # In VSCode: Help > Toggle Developer Tools
     $ # Copy window.location.pathname.replace(/\/[^\/]+$/, '')
-    $ resPrefix=/above/copied/path
+    $ resPrefix=/opt/visual-studio-code/resources/app/out/vs/code/electron-sandbox/workbench
     $ # Symlink required files in the above folder.
     $ ln -s '/full/path/to/.dotfiles/.config/Code/User/vsc.css' $resPrefix
     $ ln -s '/full/path/to/.dotfiles/.icons/default/vsc/' $resPrefix
