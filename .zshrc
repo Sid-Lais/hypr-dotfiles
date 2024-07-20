@@ -43,7 +43,6 @@ fi
 plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 # zsh-autocomplete
 # alias-tips
-source $ZSH/oh-my-zsh.sh
 
 # Options section
 setopt extendedglob             # Extended globbing. Allows using regular expressions with *
@@ -98,7 +97,7 @@ zstyle ':completion:*' use-cache on
 HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+#DISABLE_AUTO_UPDATE="true"
 
 
 # Exports
@@ -124,23 +123,6 @@ export JDK_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 export CHROME_EXECUTABLE="/usr/lib/chromium-browser/chromium-browser"
 export MOZ_ENABLE_WAYLAND=1
 
-export HADOOP_HOME=/home/proxzima/.local/bin/hadoop
-export HADOOP_INSTALL=$HADOOP_HOME
-export HADOOP_MAPRED_HOME=$HADOOP_HOME
-export HADOOP_COMMON_HOME=$HADOOP_HOME
-export HADOOP_HDFS_HOME=$HADOOP_HOME
-export YARN_HOME=$HADOOP_HOME
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
-export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib/nativ"
-# export HADOOP_OPTS="-Dlog4j.debug=true,-Djava.library.path=$HADOOP_HOME/lib/nativ"
-
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$HOME/.pub-cache/bin
 
 # colorize man pages
 export LESS_TERMCAP_mb=$'\e[1;32m'
@@ -170,13 +152,29 @@ lnvm () {
 }
 
 
-copydots() {
-    _USER=/home/proxzima;
-    rsync -rvqO --inplace --exclude '.git/' --files-from ~/.dotfiles/.dotpaths $_USER $_USER/.dotfiles;
-    find $_USER/.dotfiles/.local/share/fonts/ -name '*.uuid' -type f -delete;
-    rm -rf $_USER/.dotfiles/.mpd/mpd{.log,.pid,state};
+# Handy change dir shortcuts
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
 
-}
+# Core Utils Aliases
+alias mkdir='mkdir -p'
+#alias ssh='kitten ssh'
+alias tree='tree -a -I .git'
+#alias cat='bat'
+alias c='clear' # clear terminal
+alias e='exit'
+alias mkdir='mkdir -p'
+alias vim='nvim'
+#alias grep='rg --color=auto'
+
+# Git Aliases
+alias gst='git status'
+alias gac='git add . && git commit -m' alias gs='git status'
+alias gpush='git push origin'
+
 
 cht() {curl cht.sh/$1}
 
@@ -190,7 +188,6 @@ myip() {json=$(curl -s https://ipinfo.io/);echo " Local IP : $(hostname -i | awk
 
 # ff() {firefox -width 5 -height 5 -P app --private-window "data:text/html,<script>window.open('"$1"','_blank','top=50,left=200,width=900px,height=660px,directories=0,titlebar=0,toolbar=0,location=0,status=0,menubar=0');window.close()</script>" 2>/dev/null & disown}
 
-ff() {firefox -width 900 -height 600 -P app "$1" 2>/dev/null & disown}
 
 ydl() {yt-dlp -ix --audio-format mp3 --audio-quality 0 -o '~/Downloads/songs/%(title)s.%(ext)s' "$1"}
 
@@ -205,3 +202,8 @@ mkfile() {mkdir -p "$(dirname "$1")" && touch "$1";}
 
 # The next line enables shell command completion for gcloud.
 # if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi
+
+# These lines setup the DevZero CLI completions.
+if test -x "/usr/local/bin/dzcmd"; then
+source <(/usr/local/bin/dzcmd dz completion zsh)
+fi
