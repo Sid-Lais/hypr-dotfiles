@@ -175,6 +175,8 @@ alias gst='git status'
 alias gac='git add . && git commit -m' alias gs='git status'
 alias gpush='git push origin'
 
+# Addresses
+alias pi5='pi5.tailc27c7c.ts.net'
 
 cht() {curl cht.sh/$1}
 
