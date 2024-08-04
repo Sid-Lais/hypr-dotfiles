@@ -57,7 +57,7 @@ WEATHER_CODES = {
 data = {}
 
 try:
-    weather = requests.get("https://wttr.in/411001?format=j1").json()
+    weather = requests.get("https://wttr.in/New+Delhi?format=j1").json()
 except Exception:
     data['text'] = '🪐'
     data['tooltip'] = 'Weather data unavailable'
