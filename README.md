@@ -67,7 +67,7 @@ https://user-images.githubusercontent.com/43103163/217900808-384586b7-37e4-4d64-
 
 - Using <kbd>yay</kbd>
     ```sh
-    yay -S base-devel pokemon-colorscripts-git hyprland-git hyprpicker-git xdg-desktop-portal-hyprland waybar cava kitty wofi starship wl-clipboard swww swaync swaylock-effects-git tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist gamemode polkit-gnome wlogout visual-studio-code-bin boo-grub-git sddm-git boo-sddm-git proxzima-plymouth-git yad blueman network-manager-applet libinput-gestures light grim slurp --needed
+    yay -S gnome-tweaks base-devel pokemon-colorscripts-git hyprland-git hyprpicker-git xdg-desktop-portal-hyprland waybar cava kitty wofi starship wl-clipboard swww swaync swaylock-effects-git tty-clock-git playerctl pavucontrol btop mpd mpd-mpris mpv mpv-mpris qt5-base qt5-wayland qt6-base qt6-wayland lsd geany bat cliphist gamemode polkit-gnome wlogout visual-studio-code-bin boo-grub-git sddm-git boo-sddm-git proxzima-plymouth-git yad blueman network-manager-applet libinput-gestures light grim slurp --needed
     ```
 
 - See https://wiki.hyprland.org/Useful-Utilities/Hyprland-desktop-portal/#installing
