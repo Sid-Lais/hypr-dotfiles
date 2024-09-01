@@ -15,14 +15,14 @@ if [[ "$?" == 0 ]]; then
         systemctl reboot
     elif [[ "$1" == 'hibernate' ]]; then
         playerctl --all-players stop
-        ~/.scripts/lock
+        hyprlock
         sleep 0.5s
         systemctl suspend-then-hibernate
     elif [[ "$1" == 'lock' ]]; then
-        ~/.scripts/lock
+        hyprlock
     elif [[ "$1" == 'suspend' ]]; then
         playerctl --all-players stop
-        ~/.scripts/lock
+        hyprlock
         sleep 0.5s
         systemctl suspend
     elif [[ "$1" == 'logout' ]]; then
