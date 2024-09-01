@@ -118,7 +118,7 @@ rehash_precmd() {
 add-zsh-hook -Uz precmd rehash_precmd
 
 alias vim=nvim
-alias btop=btop --utf-force
+alias btop="btop --utf-force"
 
 # omz
 alias zshconfig="geany ~/.zshrc"
