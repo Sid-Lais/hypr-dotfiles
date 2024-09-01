@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-swaylockd \
+swaylock \
 --image ~/.config/hypr/wallpapers/-n8nze4.jpg \
 --indicator \
 --clock \
