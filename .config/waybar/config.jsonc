@@ -2,7 +2,7 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     //"gtk-layer-shell": "false",
-    "height": 45, // Waybar height (to be removed for auto height)
+    "height": 48, // Waybar height (to be removed for auto height)
     // "width": 2560, // Waybar width
     "spacing": 0, // Gaps between modules (0px) Adjusted in the css
     "margin-top": 0,
@@ -60,13 +60,13 @@
     "cpu": {
         "format": " {usage}%",
         "tooltip": true,
-        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop --utf-force'",
         "interval": 2
     },
     "memory": {
         "format": " {}%",
         "tooltip": true,
-        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop --utf-force'",
         "interval": 2
     },
     "temperature": {
@@ -81,13 +81,13 @@
             ""
         ],
         "tooltip": true,
-        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop --utf-force'",
         "interval": 2
     },
     "disk": {
         "format": " {percentage_used}% ({free})",
         "tooltip": true,
-        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop --utf-force'",
         "interval": 2
     },
     "custom/updates": {
@@ -229,7 +229,7 @@
         "spacing": 15
     },
     "clock": {
-        "timezone": "Asia/Calcutta",
+        "timezone": "Asia/Kolkata",
         "format": " {:%d <small>%a</small> %H:%M}",
         //"format": " {:%a %b %d %Y | %H:%M}",
         "format-alt": " {:%A %B %d %Y (%V) | %r}",
