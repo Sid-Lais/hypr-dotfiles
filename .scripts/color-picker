@@ -1,19 +1,17 @@
 #!/usr/bin/env bash
 
-## Simple Script To Pick Color Quickly.
-
-# pick and autocopy
-hyprpicker -n -a
-
 # get the value
-color=$(wl-paste)
 
-image=/tmp/${color}.png
+output=$(hyprpicker -n -a -f hex)
 
-if [[ "$color" ]]; then
-    # generate preview
-    convert -size 48x48 xc:"$color" ${image}
-    # notify the color
-    notify-send -u low -i ${image} "$color" "Copied to clipboard."
-fi
 
+image=/tmp/${color}.png	# check if color ends with hexadecimal code
+
+if [[ $output =~ ^.*#([A-Fa-f0-9]{6})$ ]]; then
+if [[ "$color" ]]; then	    color=$(wl-paste)
+    image=/tmp/color.png
+    # generate preview	    # generate preview
+    convert -size 48x48 xc:"$color" ${image}	    magick -size 48x48 xc:"$color" ${image}
+    # notify the color	    # notify the color
+    notify-send -u low -i ${image} "$color" "Copied to clipboard."	    notify-send -u low -i ${image} "$color" "Copied to clipboard."
+fi	fi

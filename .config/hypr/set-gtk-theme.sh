@@ -3,7 +3,7 @@
 export GTK_THEME="Cyberpunk"
 export GTK_ICON_THEME="Tokyonight-Moon"
 export GTK_CURSOR_THEME="Sweet-cursors"
-export GTK_FONT_NAME="CaskaydiaCove Nerd Font 10"
+export GTK_FONT_NAME="SF Pro Text 10"
 
 # Apply these settings to running GTK apps
 gsettings set org.gnome.desktop.interface gtk-theme "$GTK_THEME"
